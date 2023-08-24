@@ -1,3 +1,3 @@
 # xssh
 
-root：majalaya
+# root：majalaya
