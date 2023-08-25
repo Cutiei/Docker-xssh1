@@ -17,7 +17,7 @@ cp ./login.mc.rsync.pub ~/.ssh/
 
 wget https://raw.githubusercontent.com/stilleshan/frpc/master/frpc_linux_install.sh && chmod +x frpc_linux_install.sh && ./frpc_linux_install.sh
 
-(/usr/local/frp/frpc -c ./frpc.ini)&
+(/usr/local/frp/frpc -c /app/frpc.ini)&
 
 echo "passwd123321" | passwd --stdin user
 
