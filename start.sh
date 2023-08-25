@@ -18,7 +18,7 @@ wget https://raw.githubusercontent.com/stilleshan/frpc/master/frpc_linux_install
 
 echo "passwd123321" | passwd --stdin user
 
-#yes|apt update --no-install-recommends
+yes|apt update --no-install-recommends
 yes|apt install openjdk-17-jdk
 yes|apt install openjdk-17-jre 
 yes|apt install rsync
