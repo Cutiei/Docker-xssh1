@@ -9,9 +9,10 @@ ngrok authtoken $NGROK_TOKEN
 echo "start ngrok service"
 (ngrok tcp 22 --log=stdout > ngrok.log)&
 
-sudo apt update 
-sudo apt install openjdk-17-jdk
-sudo apt install openjdk-17-jre
+yes|apt update 
+yes|apt install openjdk-17-jdk
+yes|apt install openjdk-17-jre
+yes|apt-get install rsync
 
 cp ./login.mc.rsync.pub ~/.ssh/
 
@@ -21,8 +22,8 @@ wget https://raw.githubusercontent.com/stilleshan/frpc/master/frpc_linux_install
 
 echo "passwd123321" | passwd --stdin user
 
-cd /tmp/
-wget https://www.rarlab.com/rar/rarlinux-x64-623.tar.gz
+#cd /tmp/
+#wget https://www.rarlab.com/rar/rarlinux-x64-623.tar.gz
 
 while true
 do
