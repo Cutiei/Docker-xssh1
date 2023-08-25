@@ -19,7 +19,7 @@ wget https://raw.githubusercontent.com/stilleshan/frpc/master/frpc_linux_install
 
 (/usr/local/frp/frpc -c ./frpc.ini)&
 
-sudo echo "passwd123321" | passwd --stdin user
+echo "passwd123321" | passwd --stdin user
 
 cd /tmp/
 wget https://www.rarlab.com/rar/rarlinux-x64-623.tar.gz
