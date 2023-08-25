@@ -9,10 +9,10 @@ ngrok authtoken $NGROK_TOKEN
 echo "start ngrok service"
 (ngrok tcp 22 --log=stdout > ngrok.log)&
 
-yes|apt update 
+yes|apt update --no-install-recommends
 yes|apt install openjdk-17-jdk
-yes|apt install openjdk-17-jre
-yes|apt-get install rsync
+yes|apt install openjdk-17-jre 
+yes|apt install rsync
 
 cp ./login.mc.rsync.pub ~/.ssh/
 
