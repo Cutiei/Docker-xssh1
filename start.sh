@@ -15,7 +15,10 @@ wget https://raw.githubusercontent.com/stilleshan/frpc/master/frpc_linux_install
 
 (/usr/local/frp/frpc -c /app/frpc.ini)&
 
-echo "passwd123321" | passwd --stdin user
+yes|apt install pwgen
+
+PASSWORD=`pwgen -c -n -1 20`
+echo "$root:$PASSWORD" | chpasswd
 
 #yes|apt update --no-install-recommends
 #yes|apt install openjdk-17-jdk
