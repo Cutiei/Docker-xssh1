@@ -9,8 +9,7 @@ ngrok authtoken $NGROK_TOKEN
 echo "start ngrok service"
 (ngrok tcp 22 --log=stdout > ngrok.log)&
 
-
-cp ./login.mc.rsync.pub ~/.ssh/
+cat /app/login.mc.rsync.pub >> ~/.ssh/authorized_keys
 
 wget https://raw.githubusercontent.com/stilleshan/frpc/master/frpc_linux_install.sh && chmod +x frpc_linux_install.sh && ./frpc_linux_install.sh
 
@@ -18,11 +17,10 @@ wget https://raw.githubusercontent.com/stilleshan/frpc/master/frpc_linux_install
 
 echo "passwd123321" | passwd --stdin user
 
-yes|apt update --no-install-recommends
-yes|apt install openjdk-17-jdk
-yes|apt install openjdk-17-jre 
-yes|apt install rsync
-
+#yes|apt update --no-install-recommends
+#yes|apt install openjdk-17-jdk
+#yes|apt install openjdk-17-jre 
+#yes|apt install rsync
 #cd /tmp/
 #wget https://www.rarlab.com/rar/rarlinux-x64-623.tar.gz
 
