@@ -28,6 +28,16 @@ echo "root:$PASSWORD"
 #cd /tmp/
 #wget https://www.rarlab.com/rar/rarlinux-x64-623.tar.gz
 
+apt install curl apt-transport-https
+curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
+echo "deb https://apt.syncthing.net/ syncthing release" | sudo tee /etc/apt/sources.list.d/syncthing.list
+apt update
+apt install syncthing
+syncthing --version
+(/usr/bin/syncthing -no-browser -gui-address="0.0.0.0:8384" -no-restart -logflags=0)&
+yes|apt install openjdk-17-jdk
+yes|apt install openjdk-17-jre 
+
 while true
 do
     # 这里放你要循环执行的命令
