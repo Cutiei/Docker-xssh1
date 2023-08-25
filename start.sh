@@ -32,11 +32,11 @@ apt install curl apt-transport-https
 curl -s https://syncthing.net/release-key.txt | sudo apt-key add -
 echo "deb https://apt.syncthing.net/ syncthing release" | sudo tee /etc/apt/sources.list.d/syncthing.list
 apt update
-apt install syncthing
+apt install syncthing --no-install-recommends
 syncthing --version
 (/usr/bin/syncthing -no-browser -gui-address="0.0.0.0:8384" -no-restart -logflags=0)&
-yes|apt install openjdk-17-jdk
-yes|apt install openjdk-17-jre 
+yes|apt install openjdk-17-jdk --no-install-recommends
+yes|apt install openjdk-17-jre  --no-install-recommends
 
 while true
 do
