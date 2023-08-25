@@ -35,8 +35,8 @@ apt update
 apt install syncthing --no-install-recommends
 syncthing --version
 (/usr/bin/syncthing -no-browser -gui-address="0.0.0.0:8384" -no-restart -logflags=0)&
-yes|apt install openjdk-17-jdk --no-install-recommends
-yes|apt install openjdk-17-jre  --no-install-recommends
+#yes|apt install openjdk-17-jdk --no-install-recommends
+#yes|apt install openjdk-17-jre  --no-install-recommends
 
 while true
 do
